@@ -20,11 +20,20 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.days = [
+                        'Monday',
+                        'Thuseday',
+                        'Wednesday',
+                        'Thursday',
+                        'Friday',
+                        'Saturday',
+                        'Sunday'
+                    ];
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'articles',
-                        template: '<div>This is component</div>'
+                        template: "\n\t<ul>\n\t\t<li *ngFor = \"#day of days\">{{ day }}</li>\n\t</ul>\n\t"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
