@@ -1,2 +1,4 @@
-# angular2-course
-Repo contains files from my Angular2 course
+### angular2-course
+Repository contains files from my course of `Angular 2`.
+
+[Link to the course](https://strefakursow.pl/kursy/web_develop/kurs_angular_2_-_od_podstaw.html)
