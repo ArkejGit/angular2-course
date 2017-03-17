@@ -26,6 +26,7 @@ System.register(['angular2/core', './article', './article.component'], function(
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.articles = ARTICLES;
                 }
                 AppComponent = __decorate([
                     core_1.Component({
@@ -39,6 +40,7 @@ System.register(['angular2/core', './article', './article.component'], function(
             }());
             exports_1("AppComponent", AppComponent);
             ARTICLES = [
+                new article_1.Article('Bootstrap', 'http://getbootstrap.com/', 'Foundation is a family of responsive front-end frameworks that make it easy to design.', 'http://bower.io/img/bower-logo.png'),
                 new article_1.Article('Bootstrap', 'http://getbootstrap.com/', 'Foundation is a family of responsive front-end frameworks that make it easy to design.', 'http://bower.io/img/bower-logo.png'),
                 new article_1.Article('Bootstrap', 'http://getbootstrap.com/', 'Foundation is a family of responsive front-end frameworks that make it easy to design.', 'http://bower.io/img/bower-logo.png'),
                 new article_1.Article('Bootstrap', 'http://getbootstrap.com/', 'Foundation is a family of responsive front-end frameworks that make it easy to design.', 'http://bower.io/img/bower-logo.png'),
