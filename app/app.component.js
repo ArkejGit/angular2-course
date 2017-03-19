@@ -1,4 +1,4 @@
-System.register(['angular2/core', './article', './article.component'], function(exports_1, context_1) {
+System.register(['angular2/core', './article.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,15 +10,12 @@ System.register(['angular2/core', './article', './article.component'], function(
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, article_1, article_component_1;
-    var AppComponent, ARTICLES;
+    var core_1, article_component_1;
+    var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (article_1_1) {
-                article_1 = article_1_1;
             },
             function (article_component_1_1) {
                 article_component_1 = article_component_1_1;
@@ -39,12 +36,6 @@ System.register(['angular2/core', './article', './article.component'], function(
                 return AppComponent;
             }());
             exports_1("AppComponent", AppComponent);
-            ARTICLES = [
-                new article_1.Article('Bootstrap', 'http://getbootstrap.com/', 'Foundation is a family of responsive front-end frameworks that make it easy to design.', 'http://bower.io/img/bower-logo.png'),
-                new article_1.Article('Bootstrap', 'http://getbootstrap.com/', 'Foundation is a family of responsive front-end frameworks that make it easy to design.', 'http://bower.io/img/bower-logo.png'),
-                new article_1.Article('Bootstrap', 'http://getbootstrap.com/', 'Foundation is a family of responsive front-end frameworks that make it easy to design.', 'http://bower.io/img/bower-logo.png'),
-                new article_1.Article('Bootstrap', 'http://getbootstrap.com/', 'Foundation is a family of responsive front-end frameworks that make it easy to design.', 'http://bower.io/img/bower-logo.png'),
-            ];
         }
     }
 });
