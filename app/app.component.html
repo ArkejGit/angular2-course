@@ -1,8 +1,8 @@
 <div class="sk-form-container">
-	<form [ngFormModel]="articleForm" action="">
+	<form [ngFormModel]="articleForm" (ngSubmit)="onSubmit()">
 		<h3>Dodaj nowy artykuł</h3>
 		<div class="ui form">
-		<div class="field ui error">
+		<div class="field ui">
 			<label>Tytuł:</label>
 			<input type="text" name="title" [NgFormControl]="articleForm.controls['title']" />
 		</div>
@@ -18,7 +18,7 @@
 			<label>Obrazek (link):</label>
 			<input type="text" name="image" [NgFormControl]="articleForm.controls['image']" />/>
 		</div>
-		<div class="positive ui large button">Dodaj</div>
+		<button type="submit" class="positive ui large button">Dodaj</button> 
 		</div>
 	</form>
 </div>

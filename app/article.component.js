@@ -21,7 +21,6 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             ArticleComponent = (function () {
                 function ArticleComponent() {
                 }
-                //article: Article;
                 ArticleComponent.prototype.votePlus = function () {
                     this.article.votePlus();
                     return false;

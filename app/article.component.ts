@@ -12,7 +12,7 @@ import { Article } from './article';
 
 export class ArticleComponent {
 
-	//article: Article;
+	article: Article;
 
 	votePlus(): boolean {
 		this.article.votePlus();

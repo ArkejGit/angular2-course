@@ -39,4 +39,12 @@ export class AppComponent implements OnInit {
 	ngOnInit() {
 		this.getArticles();
 	}
+
+	onSubmit() {
+		this.articles.push(new Article(this.title.value, this.link.value, this.description.value, this.image.value));
+		this.title.updateValue("");
+		this.link.updateValue("");
+		this.description.updateValue("");
+		this.image.updateValue("");
+	}
 }
