@@ -15,8 +15,20 @@ import { ArticleService } from './article.service';
 export class AppComponent implements OnInit {
 
 	articles: Article[];
+	articleForm: ControlGroup;
 
-	constructor(private _articleService: ArticleService) {
+	title: Control = new Control();
+	link: Control = new Control();
+	description: Control = new Control();
+	image: Control = new Control();
+
+	constructor(private _articleService: ArticleService, fb: FormBuilder) {
+		this.articleForm = fb.group({
+			'title': this.title,
+			'link': this.link,
+			'description': this.description,
+			'image': this.image,
+		})
 	}
 
 	getArticles() {

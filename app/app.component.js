@@ -28,8 +28,18 @@ System.register(['angular2/core', 'angular2/common', './article.component', './a
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent(_articleService) {
+                function AppComponent(_articleService, fb) {
                     this._articleService = _articleService;
+                    this.title = new common_1.Control();
+                    this.link = new common_1.Control();
+                    this.description = new common_1.Control();
+                    this.image = new common_1.Control();
+                    this.articleForm = fb.group({
+                        'title': this.title,
+                        'link': this.link,
+                        'description': this.description,
+                        'image': this.image,
+                    });
                 }
                 AppComponent.prototype.getArticles = function () {
                     var _this = this;
@@ -46,7 +56,7 @@ System.register(['angular2/core', 'angular2/common', './article.component', './a
                         providers: [article_service_1.ArticleService],
                         templateUrl: 'app/app.component.html'
                     }), 
-                    __metadata('design:paramtypes', [article_service_1.ArticleService])
+                    __metadata('design:paramtypes', [article_service_1.ArticleService, common_1.FormBuilder])
                 ], AppComponent);
                 return AppComponent;
             }());
