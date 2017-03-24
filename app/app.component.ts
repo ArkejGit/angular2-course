@@ -1,13 +1,13 @@
 import { Component } from 'angular2/core';
 import { OnInit } from 'angular2/core';
-import { NgFor } from 'angular2/common';
+import { NgFor, FORM_DIRECTIVES, FormBuilder, Validator, ControlGroup, Control } from 'angular2/common';
 import { Article } from './article';
 import { ArticleComponent } from './article.component';
 import { ArticleService } from './article.service';
 
 @Component({
 	selector: 'articles',
-	directives: [ArticleComponent],
+	directives: [ArticleComponent, FORM_DIRECTIVES],
 	providers: [ArticleService],
 	templateUrl: 'app/app.component.html'
 })
