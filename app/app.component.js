@@ -33,10 +33,10 @@ System.register(['angular2/core', 'angular2/common', './article', './article.com
             AppComponent = (function () {
                 function AppComponent(_articleService, fb) {
                     this._articleService = _articleService;
-                    this.title = new common_1.Control();
-                    this.link = new common_1.Control();
-                    this.description = new common_1.Control();
-                    this.image = new common_1.Control();
+                    this.title = new common_1.Control("", common_1.Validators.required);
+                    this.link = new common_1.Control("", common_1.Validators.required);
+                    this.description = new common_1.Control("", common_1.Validators.required);
+                    this.image = new common_1.Control("", common_1.Validators.required);
                     this.articleForm = fb.group({
                         'title': this.title,
                         'link': this.link,
@@ -62,7 +62,7 @@ System.register(['angular2/core', 'angular2/common', './article', './article.com
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'articles',
-                        directives: [article_component_1.ArticleComponent, common_1.FORM_DIRECTIVES],
+                        directives: [article_component_1.ArticleComponent, common_1.FORM_DIRECTIVES, common_1.NgClass],
                         providers: [article_service_1.ArticleService],
                         templateUrl: 'app/app.component.html'
                     }), 

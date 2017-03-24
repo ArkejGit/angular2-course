@@ -2,23 +2,22 @@
 	<form [ngFormModel]="articleForm" (ngSubmit)="onSubmit()">
 		<h3>Dodaj nowy artykuł</h3>
 		<div class="ui form">
-		<div class="field ui">
+		<div class="field ui" [ngClass]="{error: !articleForm.find('title').valid && !articleForm.find('title').touched}">
 			<label>Tytuł:</label>
 			<input type="text" name="title" [NgFormControl]="articleForm.controls['title']" />
 		</div>
-		<div class="field">
-			<label>Link:</label>
+		<div class="field ui" [ngClass]="{error: !articleForm.find('link').valid && !articleForm.find('link').touched}">			<label>Link:</label>
 			<input type="text" name="link" [NgFormControl]="articleForm.controls['link']" /> />
 		</div>
-		<div class="field">
+		<div class="field ui" [ngClass]="{error: !articleForm.find('description').valid && !articleForm.find('description').touched}">
 			<label>Opis (max 120 znaków):</label>
 			<input type="text" name="description" [NgFormControl]="articleForm.controls['description']" />/>
 		</div>
-		<div class="field">
+		<div class="field ui" [ngClass]="{error: !articleForm.find('image').valid && !articleForm.find('image').touched}">
 			<label>Obrazek (link):</label>
 			<input type="text" name="image" [NgFormControl]="articleForm.controls['image']" />/>
 		</div>
-		<button type="submit" class="positive ui large button">Dodaj</button> 
+		<button type="submit" class="positive ui large button" [ngClass]="{disabled: !articleForm.valid}">Dodaj</button> 
 		</div>
 	</form>
 </div>

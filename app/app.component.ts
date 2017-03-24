@@ -1,13 +1,13 @@
 import { Component } from 'angular2/core';
 import { OnInit } from 'angular2/core';
-import { NgFor, FORM_DIRECTIVES, FormBuilder, Validator, ControlGroup, Control } from 'angular2/common';
+import { NgFor, FORM_DIRECTIVES, FormBuilder, Validators, ControlGroup, Control, NgClass } from 'angular2/common';
 import { Article } from './article';
 import { ArticleComponent } from './article.component';
 import { ArticleService } from './article.service';
 
 @Component({
 	selector: 'articles',
-	directives: [ArticleComponent, FORM_DIRECTIVES],
+	directives: [ArticleComponent, FORM_DIRECTIVES, NgClass],
 	providers: [ArticleService],
 	templateUrl: 'app/app.component.html'
 })
@@ -17,10 +17,10 @@ export class AppComponent implements OnInit {
 	articles: Article[];
 	articleForm: ControlGroup;
 
-	title: Control = new Control();
-	link: Control = new Control();
-	description: Control = new Control();
-	image: Control = new Control();
+	title: Control = new Control("", Validators.required);
+	link: Control = new Control("", Validators.required);
+	description: Control = new Control("", Validators.required);
+	image: Control = new Control("", Validators.required);
 
 	constructor(private _articleService: ArticleService, fb: FormBuilder) {
 		this.articleForm = fb.group({
